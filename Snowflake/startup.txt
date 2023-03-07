@@ -1,0 +1,8 @@
+#!/bin/bash
+
+. /opt/bitnami/scripts/kafka/setup.sh
+. /opt/bitnami/scripts/kafka/start_connector.sh&
+
+exec /opt/bitnami/scripts/kafka/run.sh
+
+

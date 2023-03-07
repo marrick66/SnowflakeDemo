@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Waiting for Kafka to start before adding connector..."
+sleep 30
+echo -e "\n--\n+> Creating Kafka Connect Snowflake sink"
+exec /opt/bitnami/kafka/bin/connect-standalone.sh /opt/bitnami/kafka/config/connect-standalone.properties /opt/bitnami/kafka/config/SF_connect.properties

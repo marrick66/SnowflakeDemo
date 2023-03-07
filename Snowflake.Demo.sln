@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.API", "src\Demo.API\Demo.API.csproj", "{C685650A-E865-441E-BEEB-C1CD58C3C80C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.Kafka", "src\Serilog.Sinks.Kafka\Serilog.Sinks.Kafka.csproj", "{F4BC69D8-F62E-47E9-AA87-A1548EC35953}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snowflake", "Snowflake", "{7D6CE953-C778-4ACC-8F5A-3BF58BB85776}"
+	ProjectSection(SolutionItems) = preProject
+		Snowflake\SF_connect.properties = Snowflake\SF_connect.properties
+		Snowflake\snowflake-kafka-connector-1.9.1.jar = Snowflake\snowflake-kafka-connector-1.9.1.jar
+		Snowflake\start_connector.txt = Snowflake\start_connector.txt
+		Snowflake\startup.txt = Snowflake\startup.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F0C2B57-368F-4D75-ABB1-8D50DC67D680}"
+	ProjectSection(SolutionItems) = preProject
+		API_Dockerfile = API_Dockerfile
+		docker-compose.yml = docker-compose.yml
+		SF_Dockerfile = SF_Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C685650A-E865-441E-BEEB-C1CD58C3C80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C685650A-E865-441E-BEEB-C1CD58C3C80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C685650A-E865-441E-BEEB-C1CD58C3C80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C685650A-E865-441E-BEEB-C1CD58C3C80C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4BC69D8-F62E-47E9-AA87-A1548EC35953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4BC69D8-F62E-47E9-AA87-A1548EC35953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4BC69D8-F62E-47E9-AA87-A1548EC35953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4BC69D8-F62E-47E9-AA87-A1548EC35953}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD6E4E4F-1949-4E43-B2BC-41C21B6FDD83}
+	EndGlobalSection
+EndGlobal

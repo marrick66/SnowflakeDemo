@@ -1,0 +1,25 @@
+FROM bitnami/kafka:latest AS base
+EXPOSE 9092
+
+COPY Snowflake/snowflake-kafka-connector-1.9.1.jar /opt/bitnami/kafka/libs/
+
+COPY Snowflake/SF_connect.properties /opt/bitnami/kafka/config/
+
+COPY Snowflake/startup.txt /opt/bitnami/scripts/kafka/
+COPY Snowflake/start_connector.txt /opt/bitnami/scripts/kafka/
+
+WORKDIR /opt/bitnami/scripts/kafka
+
+RUN mv ./startup.txt ./startup.sh
+RUN mv ./start_connector.txt ./start_connector.sh
+
+USER root
+RUN chmod a+x ./startup.sh
+RUN chmod a+x ./start_connector.sh
+USER 1001
+
+CMD ["/opt/bitnami/scripts/kafka/startup.sh"]
+
+
+
+
